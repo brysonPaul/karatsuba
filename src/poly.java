@@ -5,7 +5,7 @@ public class poly {
     public static void main(String[] args) {
         //Initializes a scanner and the hold which will hold the output
         Scanner sc = new Scanner(System.in);
-        //assignes values to n,t1, and t2 using input
+        //assigns values to n,t1, and t2 using input
         int n = (1 << sc.nextInt());
         long[] t1 = new long[n];
         long[] t2 = new long[n];
@@ -22,7 +22,7 @@ public class poly {
         polynomial p2 = new polynomial(t2);
         polynomial p3 = p1.mult(p2);
         //prints output
-        System.out.println(p3.out());
+        System.out.print(p3.out());
     }
 }
 
@@ -36,10 +36,6 @@ class polynomial {
     public polynomial(long[] vals) {
         this.length = vals.length;
         this.coeff = vals;
-    }
-    //returns the coeff
-    public long[] getCoeff() {
-        return this.coeff;
     }
     //prints out the final polynomial values as a stringbuilder
     public StringBuilder out() {
